@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<head>
+    <title>Reply Reviews</title>
+</head>
+<body>
+    <div>
+        <h1>Reply Reviews</h1>
+    </div>
+    <div>
+        <form method = "post" enctype="multipart/form-data">	
+            <label for="data">Train Dataset:</label>
+            <input type="file" name="file">
+            <input class="button" type="submit" name="upload" value="upload_file"><br>
+    </div>
+
+    <div>
+        <form method = "post">	
+            <label>Text Column:</label>
+            <select name="x_col">
+                {% for col in columns %}
+                <option value="{{ col }}">{{ col }}</option>
+                {% endfor %}
+            </select>
+
+            <label>Reply Column:</label>
+            <select name="y_col">
+                {% for col in columns %}
+                <option value="{{ col }}">{{ col }}</option>
+                {% endfor %}
+            </select>
+            <br>
+            <label for="input">Write Review:</label>
+            <input type="text" name="input">
+            <input class="button" type="submit" name="submit" value="Submit"><br>
+        </form>
+        {% include 'result.html' %}
+    </div>
+</body>
+</html>

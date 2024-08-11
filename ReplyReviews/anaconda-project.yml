@@ -1,0 +1,4 @@
+commands:
+  default:
+    unix: python ${PROJECT_DIR}/server.py 
+    supports_http_options: true

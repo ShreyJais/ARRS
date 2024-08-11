@@ -1,0 +1,13 @@
+<label for="x_col">Text Column:</label>
+<select name="x_col">
+    {% for col in columns %}
+    <option value="{{ col }}">{{ col }}</option>
+    {% endfor %}
+</select>
+
+<label for="y_col">Reply Column:</label>
+<select name="y_col">
+    {% for col in columns %}
+    <option value="{{ col }}">{{ col }}</option>
+    {% endfor %}
+</select>
